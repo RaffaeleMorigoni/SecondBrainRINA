@@ -1,0 +1,63 @@
+- [Lingua dell'utente](user-language-italian.md) — rispondere sempre in italiano, anche nei messaggi brevi
+- [Browser giusto per RINA](rina-browser-check.md) — verificare che il Chrome collegato sia la sessione RINA, non di un altro cliente
+- [Copilot Studio language rule](copilot-studio-language-rule.md) — language rules must be generic (user's language, any), never a hardcoded list
+- [Copilot Studio browser quirks](copilot-studio-browser-quirks.md) — hidden-tab rendering, AI-filled optional inputs, expression editor, Delete record key
+- [RINA F&O: utente e lavoratore](rina-fo-user-worker-prerequisite.md) — senza lavoratore collegato all'utenza la RDA non parte (Originator vuoto)
+- [Mai modificare file dei clienti](mai-modificare-file-cliente.md) — su SharePoint/Teams lavorare solo su copie
+- [RSPA senza nuovi MMD](rina-rspa-anagrafica-mmd-vuota.md) — in UAT RSPA ha 1 solo MMD nuovo: i test li faranno vedere come bug
+- [Search Items: etichette disponibilita](rina-search-items-etichette-disponibilita.md) — due liste (disponibile / da richiedere) e il tranello del parametro Cross Company
+- [Tassonomia nuova senza descrizioni](rina-tassonomia-nuova-senza-descrizioni.md) — 591 categorie nuove esistono ma sono mute: la ricerca trova solo le legacy
+- [Test di regressione: manutenzione attrezzature](rina-test-regressione-manutenzione.md) — il caso da rilanciare dopo ogni modifica alle istruzioni
+- [Utenze tester e societa](rina-utenze-tester-societa.md) — i permessi non contano, conta la societa predefinita: Roberto ed Enrico sono su RSPA, che e vuota
+- [Suite di regressione](rina-suite-regressione.md) — i casi da rilanciare dopo ogni modifica o aggiornamento, con gli attesi
+- [Mapping vecchio-nuovo: e' knowledge, non somiglianza](rina-knowledge-mapping-oldnew.md) — guardare la scheda Knowledge prima di dire che un dato manca
+- [DLP sulle knowledge: rientrato](rina-dlp-knowledge-bloccata.md) — dal 07/10 sono Ready: non usarlo piu per spiegare i fallimenti da codice vecchio
+- [Doppio messaggio: risolto sull'orchestratore](rina-doppio-messaggio-architettura.md) — il Response formatting del padre, non le istruzioni del figlio
+- [Espressioni Power Automate: l'editor fx non salva](power-automate-espressioni-non-si-salvano.md) — scriverle a mano nel campo con la @, poi Save draft + reload + Publish
+- [Sentinella #none# nei filtri](rina-sentinella-none-filtri.md) — rompeva le ricerche da codice vecchio: ora ZZNONEZZ, restano i 4 Lista prodotti
+- [Loop sulla contabilizzazione dei servizi](rina-loop-contabilizzazione-servizi.md) — InfiniteLoopDetected riprodotto: il figlio non chiude il turno e il padre ridelega
+- [Flusso storico acquisti](rina-flusso-storico-acquisti.md) — capitolo 2 del BRD: stato di costruzione, cosa manca
+- [Flussi scollegati dall'agente](rina-flussi-scollegati-dall-agente.md) — i 4 flussi non erano collegati: da chiedere spiegazioni a Chiara
+- [UPN non email](rina-upn-non-email.md) — gli strumenti vogliono User.PrincipalName: con User.Email la catena F&O si rompe in silenzio
+- [Descrizioni degli strumenti: cosa reggono](rina-descrizioni-strumenti-limiti.md) — governano lo strumento, non l'orchestrazione; limite 1024 caratteri troncati in silenzio
+- [Istruzioni: limite 8000 che tronca in silenzio](copilot-studio-istruzioni-limite-8000.md) — caratteri + newline, nessun avviso: e la causa dei blocchi mutilati
+- [Il "Mi dispiace" e un artefatto della suite](rina-fallback-generico-orchestratore.md) — in F&O le stesse domande rispondono bene: riprodurre sempre prima di correggere
+- [Search Items: il collo di bottiglia e Lista nature](rina-search-items-query-sequenziali.md) — 50s su 96 per un filtro su campo custom; le 4 query sono gia parallele
+- [Guida CAPEX/OPEX nella knowledge](rina-capex-opex-knowledge.md) — caricata l'08/10: copre le categorie, non e policy AFC e non ha soglie
+- [Template della risposta di ricerca](rina-template-risposta-ricerca.md) — titolo markdown, elenco uno per riga: "lascia una riga vuota" non funziona
+- [In F&O il formato non segue le istruzioni](rina-formato-fo-non-governabile.md) — instabile e diverso dal pannello di test: validare la forma solo in F&O
+- [Due account: DevOps e F&O](rina-due-account-devops-fo.md) — DevOps vuole HUDi, F&O e Copilot Studio vogliono RINA
+- [Task DevOps: leggere la descrizione, non il registro](rina-task-descrizione-non-registro.md) — tre giudizi su nove sbagliati per aver letto la riga del tester
+- [Company della sessione: dataAreaId](rina-company-sessione-dataareaid.md) — F&O passa la legal entity a video, non va dedotta dalle opzioni utente
+- [RDA Assistant spento](rina-rda-assistant-spento.md) — le domande sulle RDA non ricevono risposta: dimostrato accendendo e rispegnendo
+- [Lingua trascinata dai risultati](rina-lingua-trascinata-dai-risultati.md) — era la prosa italiana nell'output del flusso: tolta, PT e FR ora funzionano (a tratti)
+- [Elenco vs prosa: la vera regola sulla lingua](rina-lingua-elenco-vs-prosa.md) — elenco puntato = italiano, prosa = lingua utente: provato su 9 casi
+- [Le traduzioni delle descrizioni esistono gia](rina-traduzioni-prodotto-esistono.md) — ProductTranslations in 7 lingue, copertura piena sui codici nuovi: e la via d'uscita sul problema lingua
+- [Il padre copia, non traduce](rina-padre-copia-non-traduce.md) — la vera causa della prosa italiana: divieto esplicito nelle istruzioni del padre
+- [Lingua: l'italiano ha la precedenza](rina-lingua-interfaccia-fo.md) — basta un segnale italiano (locale o domanda): rotto solo il caso locale it + domanda inglese
+- [Express mode attivo dal 21/10](rina-express-mode-attivo.md) — taglia 23s ma consuma capacita': toggle sul trigger card, resta ON se ha preso
+- [Traduzioni LE: da serie a parallelo](rina-traduzioni-LE-costano-20s.md) — avevano riaperto il timeout, risolte agganciandole a Componi clausole: 1m42 fallita → 1m01 riuscita
+- [Non chiedere la lingua](rina-non-chiedere-la-lingua.md) — l'input era gia' opzionale: era orchestrazione, risolto con una riga nel blocco LANGUAGE del padre
+- [Stati DevOps: cosa vuol dire Ready for testing](rina-devops-significato-stati.md) — testato da noi e pronto per il cliente, non in attesa di un nostro test: Done lo mette il business
+- [Commenti DevOps: corti e in prima persona](rina-stile-commenti-devops.md) — niente tabelle ne' relazioni: il dettaglio sta nei file di plans/, non sul task
+- [La Knowledge compete con la ricerca](rina-knowledge-compete-con-la-ricerca.md) — gli Excel dei codici facevano rispondere senza interrogare F&O: causa vera del 2418, risolta dicendo a cosa servono
+- [Il secondo turno riceve la domanda del primo](rina-currentuserrequest-non-aggiornato.md) — CurrentUserRequest e' AI-filled e non si aggiorna: causa del 2418 e della lingua persa sul follow-up
+- [Il server MCP vive solo nel pannello di test](rina-mcp-dynamics-solo-nel-test.md) — sola lettura e Not connected: in F&O non viene mai usato, ma falsa i test
+- [Cambio modello fatto: GPT Chat Latest](rina-ritiro-gpt55-30-ottobre.md) — provati tre modelli: e' l'unico col formato giusto, ma perde il filo al secondo turno
+- [Monitoring: dove guardare davvero](rina-monitoring-sessioni-dove-guardare.md) — Analytics > Sessions, non Activity: e l'esito "Resolved" puo' nascondere una sessione fallita
+- [Accesso all'agente vs accesso a F&O](rina-accesso-agente-vs-ambiente.md) — due autorizzazioni distinte: senza la condivisione in Copilot Studio esce "You don't have access to talk to this bot"
+- [Condividere l'agente: omonimie e picker](rina-condivisione-agente-omonimie.md) — il campo cerca solo per nome proprio, e di Joao Vitor ce ne sono tre
+- [Il permesso di troppo sui dati di pagina](rina-permesso-dati-pagina.md) — la vera causa della mancata invocazione: cercare il permesso che contraddice, non aggiungere divieti
+- [Ricerca per parole: italiano e "inizia con"](rina-ricerca-parole-italiano-iniziaper.md) — il flusso parte e non trova: cerca su ProductSearchName italiano, e solo per prima parola
+- [La ricerca francese e intermittente](rina-ricerca-francese-non-trova.md) — stesse keyword, esito opposto: non e un problema di lingua, ripetere 3 volte prima di concludere
+- [Codici che non vengono dalla ricerca](rina-codici-fuori-dalla-ricerca.md) — la risposta bella e inventata: confrontare sempre coi risultati delle Lista prodotti
+- [Lingua dei campi Dynamics: corretta](rina-lingua-campi-dynamics.md) — la premessa "usually English" era falsa: ora lingua utente con italiano fra parentesi
+- [Le keyword cambiano ogni volta](rina-keyword-non-deterministiche.md) — la causa a monte dell intermittenza: leggere sempre Filtra parole prima di concludere
+- [Primary language: en-US e non si cambia](rina-primary-language-agente.md) — il menu offre solo varianti inglesi: l inglese e strutturale, la leva resta UserLanguage
+- [Blocco LANGUAGE: estendere, non vietare](rina-blocco-language-ambito.md) — mancavano risposte libere e da Knowledge: ES e ZH risolti, misurato prima e dopo
+- [Le variabili lingua prendono il locale](rina-variabili-lingua-dal-locale.md) — CurrentUserLanguage e UserLanguage dicono "dal contesto F&O": contraddicono il blocco LANGUAGE
+- [Chi testa non e ricavabile](rina-chi-testa-non-si-sa.md) — Analytics da solo numeri e UserEmail del trigger da InternalServerError: usare DAU e contenuto dei messaggi
+- [Casi Dafne e Alba: tabella non confrontabile](rina-casi-dafne-alba.md) — sei casi di natura diversa, e prodotti sul modello vecchio ritirato il 30/10
+- [Onsite: elencava tutto perche glielo dicevamo](rina-onsite-elenca-tutto.md) — i codici venivano dalla ricerca, non inventati: era "all items". Risolto, ma la rosa si e ristretta
+- [Rilascio: il padre non si pacchettizza](rina-rilascio-padre-managed.md) — managed di Microsoft con unmanaged layer Active: la solution porta solo figlio e flussi
+- [Timeout di Search Items](rina-timeout-search-items.md) — il timeout client scatta intorno ai 60 secondi, non ai 2 minuti

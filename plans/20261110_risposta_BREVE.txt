@@ -1,0 +1,45 @@
+Ciao Chiara, ciao Emanuela,
+
+grazie della tabella. Ho verificato i codici in anagrafica e ho rigiocato tutti e sei i casi
+sull'agente di oggi. In sintesi: cinque su sei sono a posto.
+
+- Ferro per fonderia: corretto. Provato in RCSM, risponde "non risulta rilasciato nella societa'
+  RCSM e deve essere richiesto", che e' esattamente quello che vi aspettavate.
+- Project Planning: corretto, risponde che non trova articoli pertinenti.
+- Training: corretto, SE702502.0001 e' fra le proposte.
+- Resistenza per impianti pilota: migliorato. Propone SE153006.0001 "Manutenzione impianti pilota
+  macchine di testing" e segnala che e' disponibile in PATR. Dafne e Alba avevano ragione
+  sull'impostazione: il codice giusto sta fra le manutenzioni, non fra i beni.
+- Supporto tecnico onsite: era l'unico difetto vero. L'ho corretto oggi. Ora risponde "Nessun
+  articolo trovato corrisponde in modo sufficientemente preciso a Supporto tecnico onsite".
+- Bottiglie in plastica e vetro: qui l'agente risponde MA101019.0001, che in anagrafica e'
+  "Fornitura materiali-prodotti in vetro". Ha agganciato la parola "vetro" ed e' letteralmente
+  corretto; il codice atteso MA101037.0001 e' "materiali di consumo per laboratori", cioe' la
+  categoria d'uso. Nessun articolo si chiama "bottiglie": per arrivarci serve sapere che in RINA
+  le bottiglie da laboratorio si comprano come materiale di consumo. Se ci confermate che la
+  regola e' questa, possiamo scriverla nell'agente.
+
+Perche' quattro casi su sei sono cambiati: due motivi.
+Il 30 ottobre Microsoft ha ritirato GPT-5.5 Chat e ho dovuto spostare l'agente su GPT Chat
+Latest. I casi in tabella sono anteriori al 9 ottobre, quindi prodotti con un modello che non
+esiste piu'. Inoltre oggi l'agente non da' sempre la stessa risposta alla stessa domanda: le
+parole con cui interroga l'anagrafica cambiano a ogni esecuzione. Ci sto lavorando.
+
+Una cosa su cui vi chiedo di tenere gli occhi aperti: la correzione su "onsite" rende l'agente
+piu' selettivo. La stessa domanda sulla manutenzione, che a ottobre dava sei codici fra cui
+scegliere, oggi ne da' uno solo. Per una richiesta precisa va bene, per una generica potrebbe
+essere troppo stretto. Se vi capita di pensare "mi da' un codice solo e non e' quello che
+cercavo", segnalatemelo: e' questa la causa e si allarga in pochi minuti.
+
+Per i prossimi casi mi aiuterebbe molto avere:
+1. ogni caso provato due o tre volte, annotando se la risposta cambia;
+2. la societa' in cui si stava lavorando (la ricerca dipende da quella);
+3. il testo esatto digitato, non il riassunto;
+4. la conferma sulla convenzione dei ricambi (caso Resistenza).
+
+Ultima nota utile: il monitoraggio conserva le conversazioni 29 giorni. Cinque dei sei casi erano
+gia' fuori finestra. Se le segnalazioni arrivano entro il mese riesco a risalire alla sessione
+originale e vedere esattamente cosa ha fatto l'agente.
+
+Grazie,
+Raffaele
